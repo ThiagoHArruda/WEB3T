@@ -13,8 +13,8 @@ app.use(cookieParser());
 app.use(cors())
 app.set('view engine', 'hbs');
 
+console.log(__dirname);
 app.use(express.static(path.join(__dirname,'/public')));
-
 
 mongoose.set("strictQuery", true);
 // Ligar á B.D.: 'test'->user da BD, ´nnn´->pass
@@ -34,6 +34,7 @@ app.get('/', function(req, res){
 });
 // todo o url começado por ‘/api’ chama as rotas em ‘./routes/api’
 const routes = require('./routes/api');
+app.set('views', path.join(__dirname, '/views'));
 app.use('/api', routes);
 
 // error handling middleware
