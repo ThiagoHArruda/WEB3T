@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "npm install body-parser cookie-parser ejs express handlebars hbs mongoose",
     "start": "nodemon index.js"
   },
   "keywords": [],
@@ -20,7 +21,6 @@
     "handlebars": "^4.7.7",
     "hbs": "^4.2.0",
     "mongoose": "^6.8.0",
-    "netlify-lambda": "^2.0.15",
     "node-fetch": "^3.3.0",
     "nodemon": "^2.0.20"
   }
