@@ -1,4 +1,6 @@
 // associar as dependências instaladas
+process.env.NODE_PATH = __dirname;
+require("module").Module._initPaths();
 const express = require('express');
 const bp = require('body-parser');
 const mongoose = require('mongoose');
