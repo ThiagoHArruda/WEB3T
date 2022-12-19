@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Games</title>
+    <script src="https://kit.fontawesome.com/885aa17366.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://css.gg/search.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"  type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/root.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/cabecalho.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/pesquisa__links.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/expo.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/login.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/listMovie.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/dialog.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/create.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/content.css">
+
+
+</head>
+
+<body>
+    <header>
+        {{#if update}}
+         <header>
+        <nav class="cabecalho">
+            <div class="cabecalho__logo">
+                <a href="#" class="cabecalho__logo-link"></a>
+            </div>
+            
+            <div class="cabecalho__menu-esquerda">
+                <ul class="cabecalho__options">
+                    <li class="cabecalho__options-li ">
+                        <a href="/api/main" class="cabecalho__texto texto">
+                            <p>HOME</p>
+                        </a>
+                        <div class="cabecalho__caixa-azul"></div>
+                    </li>
+                    <li class="cabecalho__options-li static">
+                        <a href="/api/content" class="cabecalho__texto texto">
+                            <p>CRIAR CONTEUDO</p>
+                        </a>
+                        <div class="cabecalho__caixa-azul"></div>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="cabecalho__menu-direita">
+                <i class="fa-solid fa-bars cabecalho__icon-direita"></i>
+                <ul class="cabecalho__options">
+                    <li class="cabecalho__options-li">
+                        <a href="#" class="cabecalho__texto texto">
+                            <i class="fa-solid fa-globe"></i>
+                        </a>
+                    </li>
+                    <li class="cabecalho__options-li sair">
+                        <i class="fas fa-user"></i>
+                        <a href="/api/logout" class="cabecalho__texto texto">
+                            <p>Sair</p>
+                        </a>
+                    </li>
+                    <li class="cabecalho__options-li">
+                        <a href="#" class="cabecalho__texto texto">
+                            <p>Baixe Epic Games</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        
+    </header>
+        {{/if}}
+    </header>
+    <main>
+        {{#if update}}
+            <section class="container">
+                <div class="content content__update">
+                    <ul class="content__list_edit">
+                    {{#if dts}}
+                    <li class="content__unit">
+                        <img class="content__img" src="{{dts.image}}" alt="">
+                        <p class="content__text">{{dts.title}}</p>
+                       
+                    </li>
+                    
+                    </li>
+                    </ul>
+                    <form action='/api/update/{{dts.id}}' method='POST'>
+                        <input type="text" class="content__search content__form" name="title" placeholder="Título">
+                        <input type="text" class="content__search content__form" name="image" placeholder="Imagem">
+                        <button type="submit" class="content__btn">Atualizar</button>
+                    </form>
+                    </div>
+                    {{/if}}
+            </section>
+            
+        {{/if}}
+        {{#if message}}
+        <div class="dialog">
+        <h1 class="dialog__title">Epic Message</h1>
+        <h2 class="dialog__text">{{message.message}}</h2>
+        <button class="dialog__btn">
+            <a href="{{message.url}}">Confirmar</a>        
+        </button>
+        {{/if}}
+    </div>
+        
+    </main>
+    
+</body>
+    <script type="module" src="/assets/controller/apiController.js"></script>
+</html>

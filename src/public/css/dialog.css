@@ -1,0 +1,48 @@
+.dialog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    height: 20vh;
+    width: 30vw;
+    top: 10%;
+    left: 35%;
+    right: 35%;
+    
+    background-color: var(--cinza-escuro);
+    border: 2px solid var(--texto-main);
+    border-radius: 2px;
+}
+
+.dialog__title{
+    font-family: var(--ff-body);
+    text-align: left;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: var(--texto);
+}
+.dialog__text{
+    font-family: var(--ff-body);
+    text-align: left;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: whitesmoke;
+}
+
+.dialog__btn{
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 5px;
+    background-color: whitesmoke;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: black;
+    border-radius: 8px;
+    text-align: center;
+}

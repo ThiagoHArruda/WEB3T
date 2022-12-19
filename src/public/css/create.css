@@ -1,0 +1,28 @@
+.create{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: auto;
+    left: 30%;
+    top: 30%;
+    border: 2px solid var(--branco);
+    border-radius: 2px;
+    background-color: var(--cinza);
+}
+.create__input{
+    width: 80%;
+    padding: .5rem;
+    margin: 5px 2px;
+    border-radius: 3px;
+}
+.create__btn{
+    margin: 5px 0;
+    width: 50%;
+    font-size: 1rem;
+    color: var(--branco);
+    background-color: var(--azul);
+    border-radius: 5px;
+    padding: 4px;
+}

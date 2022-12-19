@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Games</title>
+    <script src="https://kit.fontawesome.com/885aa17366.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://css.gg/search.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"  type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/root.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/cabecalho.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/pesquisa__links.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/expo.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/login.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/listMovie.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/dialog.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/create.css">
+</head>
+<body>
+    <section class="container">
+        <form class="create" action='/api/newAccount/register' method='POST'>
+         {{#if erro}}
+            {{#each erro}}
+                <p class="mensagem__error">{{this.Message}}</p>
+
+            {{/each}}
+        {{/if}}
+            <input type="email" name="email" class="create__input" id="accountEmail" placeholder="E-mail">
+            <input type="password" name="password" class="create__input" id="accountPassword" placeholder="Senha">
+            <button class="create__btn" type="submit">Criar</button>
+            <a href="http://localhost:5000/api/login" class="create__login texto">Sair</a>
+        </form>
+    </section>
+</body>
+</html>

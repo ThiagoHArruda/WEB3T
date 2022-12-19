@@ -1,0 +1,51 @@
+.genresList{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.genrer__texto {
+    font-family: var(--ff-body);
+    text-align: left;
+    padding: 20px 10px;
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: var(--texto-main);
+}
+.genrerList__poster{
+    display: flex;
+    gap: 20px;
+    height: 100%;
+
+}
+.movie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18%;
+}
+.movie__text {
+    padding-bottom: 8px;
+    font-size: 1.1em;
+    height: 2rem;
+    text-align: center;
+
+}
+.movie__img{
+    height: 15vw;
+    width: 10vw;
+    top: 5px;
+    left: 10px;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.expo__movieDatabase{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Games</title>
+    <script src="https://kit.fontawesome.com/885aa17366.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://css.gg/search.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"  type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/root.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/cabecalho.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/pesquisa__links.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/expo.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/login.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/listMovie.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/dialog.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="/css/create.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="cabecalho">
+            <div class="cabecalho__logo">
+                <a href="/api/main" class="">
+                    <img class="cabecalho__logo-link" src="/img/logo.png" alt="">
+                </a>
+            </div>
+            
+            <div class="cabecalho__menu-esquerda">
+                <ul class="cabecalho__options">
+                    <li class="cabecalho__options-li static">
+                        <a href="/api/main" class="cabecalho__texto texto">
+                            <p>HOME</p>
+                        </a>
+                        <div class="cabecalho__caixa-azul"></div>
+                    </li>
+                    {{#if admin}}
+                    <li class="cabecalho__options-li">
+                        <a href="/api/content" class="cabecalho__texto texto">
+                            <p>CRIAR CONTEUDO</p>
+                        </a>
+                        <div class="cabecalho__caixa-azul"></div>
+                    </li>
+                    {{/if}}
+
+                </ul>
+            </div>
+            <div class="cabecalho__menu-direita">
+                <i class="fa-solid fa-bars cabecalho__icon-direita"></i>
+                <ul class="cabecalho__options">
+                    <li class="cabecalho__options-li">
+                        <a href="#" class="cabecalho__texto texto">
+                            <i class="fa-solid fa-globe"></i>
+                        </a>
+                    </li>
+                    <li class="cabecalho__options-li sair">
+                        <i class="fas fa-user"></i>
+                        <a href="/api/logout" class="cabecalho__texto texto">
+                            <p>Sair</p>
+                        </a>
+                    </li>
+                    <li class="cabecalho__options-li">
+                        <a href="#" class="cabecalho__texto texto">
+                            <p>Baixe Epic Games</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        `
+    </header>
+    <main>
+        <section class="container">
+            <h1 class="texto title">Conteúdo da API</h1>
+        </section>
+        <section class="container">
+            <div class="pesquisa__links">
+                <div class="pesquisa">
+                    <i class="fas fa-search lupa"></i>
+
+                    <input type="search" name="Pesquisar" alt="Pesquisar Loja" placeholder="Pesquisar loja" class="pesquisa__input">
+                </div>
+                <div class="link link__esquerda">
+                    <a href="" class="link__texto texto">Descobrir</a>
+                    <a href="" class="link__texto texto">Navegar</a>
+                    <a href="" class="link__texto texto">Novidades</a>
+
+                </div>
+                <div class="link link__direita">
+                    <i class="fa-regular fa-circle-check link__icon"></i>
+                    
+                    <i class="fa-solid fa-cart-shopping link__icon"></i>
+
+                    <a href="" class="link__texto texto">Lista de Desejos</a>
+                    <a href="" class="link__texto texto">Carrinho</a>
+                </div>
+            </div>
+        </section>
+         <section class="container">
+            <h1 class="texto title">Conteúdo do Banco</h1>
+        </section>
+        <section class="container">
+            
+            <ul class="expo__movieDatabase">
+                {{#each dts}}
+                <li class="movie" >
+                    <div class="movie__text texto">{{this.title}}</div>
+                    <img src="{{this.image}}" class="movie__img"></div>
+                </li>
+                {{/each}}
+            </ul>
+        </section>
+    
+    </main>
+    
+</body>
+    <script type="module" src="/assets/controller/apiController.js"></script>
+</html>

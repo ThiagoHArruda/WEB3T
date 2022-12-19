@@ -1,0 +1,25 @@
+:root {
+    /* Cores */
+    --cinza-claro: #2a2a2a;
+    --cinza-escuro: rgb(18, 18, 18);
+    --cinza-pesquisa: rgb(32, 32, 32);
+    --branco: #FFFFFF;
+    --azul: #0078f2;
+    --texto: #ccc;
+    --texto-hover: #e7e7e7;
+    --texto-main: rgba(245, 245, 245, .4);
+    /* Fonte */
+    --ff-header: OpenSans, sans-serif, arial;
+    --ff-body: 'Lora', serif;
+    --fs-header: .75em;
+}
+
+.texto {
+    color: var(--texto);
+    text-decoration: none;
+}
+
+body {
+    font-size: 14px;
+    background-color: #0078f2;
+}

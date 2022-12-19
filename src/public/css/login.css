@@ -1,0 +1,36 @@
+.login{
+    margin-top: 30vh;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    border: 2px solid var(--cinza-claro);
+    border-radius: 2px;
+    padding: .7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+.login__text{
+    font-size: 1rem;
+}
+.login__user, .login__password{
+    background-color: var(--cinza-claro);
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.login__submit{
+    margin-top: 5px;
+    width: 50%;
+    font-size: 1rem;
+    color: var(--branco);
+    background-color: var(--azul);
+    border-radius: 5px;
+    padding: 4px;
+}
+.create__login{
+    margin-top: 5px;
+    font-size: 1rem;
+}
+.create__login:hover{
+    color: var(--branco);
+}

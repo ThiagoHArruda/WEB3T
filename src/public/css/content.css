@@ -1,0 +1,110 @@
+.content{
+    width: 100%;
+    padding: 5px;
+
+}
+.content__update{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.content__list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.content__unit{
+    width: 45%;
+    border: 1px solid azure;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.content__list_edit{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.content__img{
+    margin-left: 5%;
+    height: 12vw;
+    width: 8vw;
+    top: 5px;
+    left: 10px;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content__text{
+    color: var(--texto-main);
+    margin-right: 10%;
+    width: 25%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+.content__close,
+.content__edit{
+    width: 50px;
+    height: 50px;
+}
+
+.content__closeImg,
+.content__editImg{
+    width: 100%;
+    height: 100%;
+}
+
+.content__menu{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px;
+}
+.content__search{
+    border-radius: 20px;
+    border: 0px;
+    margin: 0px;
+    background-color: var(--cinza-pesquisa);
+    color: var(--branco);
+    font-family: var(--ff-body);
+    text-align: left;
+    padding-left: 25px;
+    font-size: 1rempx;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    height: 2rem;
+}
+.content__form{
+    width: 15vw;
+}
+.content__btn{
+    display: inline-block;
+    margin-right: 10px;
+    background: #339DFF;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 38px;
+    border-radius: 50px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 170px;
+    text-align: center;
+}
+.content__btn:hover{
+    background: #fff;
+    color: #339DFF;
+    box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
+}
+.content__message{
+    width: 100%;
+}

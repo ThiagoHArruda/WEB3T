@@ -1,0 +1,170 @@
+.pesquisa__links {
+    /* Posições e tamanhos */
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+}
+
+
+/* Pesquisa */
+
+.pesquisa {
+    position: relative;
+    align-items: center;
+    height: 40px;
+    width: 160px;
+}
+
+.pesquisa__input {
+    border-radius: 20px;
+    border: 0px;
+    margin: 0px;
+    background-color: var(--cinza-pesquisa);
+    color: var(--branco);
+    font-family: var(--ff-body);
+    text-align: left;
+    padding-left: 35px;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Tirando o X do input */
+
+
+/* clears the 'X' from Internet Explorer */
+
+input[type=search]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=search]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+
+/* clears the 'X' from Chrome */
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+.lupa {
+    position: absolute;
+    color: var(--texto-main);
+    z-index: 99;
+    bottom: 13px;
+    left: 13px;
+}
+
+.pesquisa__input:focus {
+    background-color: rgba(48, 48, 48, 0.8);
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.link {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+
+/* Direita */
+
+.link__direita {
+    position: absolute;
+    right: 0;
+}
+
+
+/* Esquerda */
+
+.link__esquerda {
+    margin-left: 20px;
+}
+
+
+/* Texto */
+
+.link__texto {
+    font-family: var(--ff-body);
+    text-align: left;
+    padding: 20px 10px;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: var(--texto-main);
+}
+.link__icon{
+    visibility: hidden;
+}
+
+
+/* Transição */
+
+.link__texto {
+    transition: color 125ms ease-in-out;
+    transition-property: color;
+    transition-duration: 125ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+
+.link__texto:hover {
+    color: var(--branco)
+}
+
+@media screen and (min-width: 1340px) {
+    .link__texto,
+    .pesquisa__input {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .link__direita a, .pesquisa__input {
+        visibility: hidden;
+        display: none;
+    }
+    .link__direita{
+        margin-right: 10%;
+    }
+    .link__esquerda{
+        position: absolute;
+        left: 45%;
+        right: 45%;
+    }
+    .link__esquerda .link__texto:nth-child(n+2){
+        visibility: hidden;
+        display: none;
+    }
+    .link__icon{
+        visibility: visible;
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    margin-left: 10px;
+    color: var(--texto-main);
+    }
+}
+@media screen and (max-width:767px){
+    .link__direita{
+        margin-right: 5%;
+    }
+}
