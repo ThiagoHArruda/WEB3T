@@ -13,7 +13,7 @@ app.use(cookieParser());
 app.use(cors())
 app.set('view engine', 'hbs');
 
-console.log(__dirname);
+
 app.use(express.static(path.join(__dirname,'/public')));
 
 mongoose.set("strictQuery", true);
